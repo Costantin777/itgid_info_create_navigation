@@ -1,0 +1,192 @@
+html,
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+    padding: 0 calc(20px - (100vw - 100%)) 0 0; 
+}
+
+.hide {
+    display: none;
+}
+
+.container-fluid {
+
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+nav {
+    display: block;
+    width: 96%;
+    margin: 0 auto;
+    position: inherit;
+}
+
+ul.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.nav-container li.nav-item {
+    list-style-type: none;
+    background: #f3efe8;
+}
+
+ul.nav-container li.nav-item.menu-item-hover {
+    background: #eb9a0b;
+}
+
+ul.nav-container li.nav-item.menu-item-hover a.menu-link {
+    color: #fff;
+}
+
+ul.nav-container .nav-item .menu-link {
+    display: block;
+    padding: 40px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #3c3c3c;
+}
+
+
+/* .sub-menu .sub-menu-item */
+ul.nav-container .sub-menu .sub-menu-item {
+    position: absolute;
+    /* background: gray; */
+    margin: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+}
+
+ul.nav-container .sub-menu .sub-menu-item-no-strech {
+    position: absolute;
+    /* background: gray; */
+    margin: 0;
+    opacity: 0;
+    display: none;
+}
+
+
+ul.nav-container .sub-menu.menu-item-hover .sub-menu-item,
+ul.nav-container .sub-menu.menu-item-hover .sub-menu-item-no-strech {
+    display: block;
+    opacity: 1;
+}
+
+ul.nav-container .sub-menu .sub-menu-item .sub-menu-body,
+ul.nav-container .sub-menu .sub-menu-item-no-strech .sub-menu-body {
+    background: #fff;
+    border-top: 4px solid #024c91;
+    padding: 30px;
+    margin: 30px;
+    margin-top: 75px;
+    transition: all ease 500ms;
+    box-shadow: 1px 1px 8px #e5e5e5;
+}
+
+ul.nav-container .sub-menu:not(.menu-item-hover) .sub-menu-item,
+ul.nav-container .sub-menu:not(.menu-item-hover) .sub-menu-item-no-strech {
+    animation-name: nav-animation-hide;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    /* animation-timing-function: linear; */
+    animation-fill-mode: forwards;
+}
+
+ul.nav-container .sub-menu:not(.menu-item-hover) .sub-menu-item .sub-menu-body,
+ul.nav-container .sub-menu:not(.menu-item-hover) .sub-menu-item-no-strech .sub-menu-body {
+    animation-name: nav-animation-hide-intro;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+
+    animation-fill-mode: backwards;
+}
+
+ul.nav-container .sub-menu.menu-item-hover .sub-menu-item .sub-menu-body,
+ul.nav-container .sub-menu.menu-item-hover .sub-menu-item-no-strech .sub-menu-body {
+    animation-name: nav-animation;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    animation-fill-mode: forwards;
+}
+@keyframes nav-animation {
+    0% {
+        margin-top: 75px;
+    }
+
+    100% {
+        margin-top: 30px;
+    }
+}
+
+@keyframes nav-animation-hide {
+    0% {
+        opacity: 1;
+        display: block;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes nav-animation-hide-intro {
+    0% {
+        margin-top: 30px;
+    }
+
+    100% {
+        margin-top: 75px;
+    }
+}
+
+/* ====================== */
+
+.container {
+    display: flex;
+}
+
+.sub-menu-body ul li {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    list-style-type: none;
+}
+
+.sub-menu-body a {
+    color: #3c3c3c;
+}
+
+.nav-row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-row .col {
+    flex: 1 1 auto;
+    margin: 20px;
+    padding: 20px;
+}
+
+.background-1 {
+    background-image: url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    color: #fff;
+}
+
+.simple-nav-list {
+    padding-left: 0;
+}
+
+.main {
+    max-width: 1200px;
+    margin: 40px auto;
+}
